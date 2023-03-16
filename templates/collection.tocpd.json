@@ -41,6 +41,7 @@
         "image": "shopify:\/\/shop_images\/tocpdd_1440_x_560_px_1-opt.webp",
         "image_overlay_opacity": 0,
         "image_height": "medium",
+        "adapt_height_first_image": true,
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -128,7 +129,7 @@
         "template--14821481873473__9e977c56-a2e6-4f78-acbb-4b99ab67e1da-167050883686550326-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>TOCPD20<\/p>",
+            "heading": "TOCPD20",
             "heading_size": "h1"
           }
         },
@@ -276,7 +277,7 @@
         "template--14821481873473__97f68048-498f-4269-aaa9-cc7e97cdcf37-167050883686550326-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Optimize your pet’s best health and achieve wholly balanced nutrition. <\/p>",
+            "heading": "Optimize your pet’s best health and achieve wholly balanced nutrition. ",
             "heading_size": "h2"
           }
         },

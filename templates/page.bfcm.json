@@ -49,6 +49,7 @@
         "image": "shopify:\/\/shop_images\/BFCM_SALE_2_7a454232-6b23-41f3-a39f-7d8ab8ffed66.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
+        "adapt_height_first_image": true,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
@@ -64,7 +65,7 @@
         "template--14841728761921__a7aeba3d-757c-4979-b093-2611f67ccaa3-1669135430e703475c-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Here's Your Black Friday Treat 🎉<\/p>",
+            "heading": "Here's Your Black Friday Treat 🎉",
             "heading_size": "h2"
           }
         },
@@ -465,6 +466,7 @@
         "image": "shopify:\/\/shop_images\/BFCM-Open-C.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
+        "adapt_height_first_image": true,
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",

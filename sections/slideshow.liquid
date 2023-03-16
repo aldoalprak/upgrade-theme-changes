@@ -1,4 +1,4 @@
-{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+  {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
@@ -26,7 +26,7 @@
   {%- endstyle -%}
 {%- endif -%}
 
-<slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
+<slideshow-component class="{{ section.settings.show_on_device }} slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
     <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
@@ -89,19 +89,36 @@
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1"
       >
-        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
+
+        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %} " >
           {%- if block.settings.image -%}
-            {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
-            {{ block.settings.image | image_url: width: 3840 | image_tag:
-              loading: 'lazy',
-              height: height,
-              sizes: "100vw",
-              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-            }}
+           <a{% if block.settings.imglink %} href="{{ block.settings.imglink }}"{% else %} role="link" aria-disabled="true"{% endif %} class="fulllink"></a>
+            <img 
+              srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+              {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+              {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if block.settings.image.width >= 1100 -%}{{ block.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+              {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+              {%- if block.settings.image.width >= 2000 -%}{{ block.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+              {%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
+              {%- if block.settings.image.width >= 3840 -%}{{ block.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
+             
+              {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+              sizes="100vw"
+              src="{{ block.settings.image | image_url: width: 1500 }}"
+              loading="lazy"
+              alt="{{ block.settings.image.alt | escape }}"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
+            >
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
         </div>
+   {% if block.settings.image_link != blank %}
+<a href="{{ block.settings.image_link }}"style="display: block;position: absolute;width: 100%;height: 100%;left: 0;top: 0;">
+{% endif %} 
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
@@ -169,15 +186,37 @@
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+<style>
+.fulllink {z-index:1111;}
+</style>
+
 {% schema %}
 {
-  "name": "t:sections.slideshow.name",
-  "tag": "section",
-  "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
-  "settings": [
+"name": "t:sections.slideshow.name",
+"tag": "section",
+"class": "section",
+"settings": [ 
+      {
+"type": "select",
+"id": "show_on_device",
+"options": [
+{
+"value": "mobile--device",
+"label": "Mobile and tablet device"
+},
+{
+"value": "desktop--device",
+"label": "Desktop device"
+},
+{
+"value": "show-all-devices",
+"label": "Show to all devices"
+}
+],
+"default": "show-all-devices",
+"label": "Show this section to this device only",
+"info": "Choose which device you want this section to show"
+},
     {
       "type": "select",
       "id": "layout",
@@ -215,7 +254,7 @@
           "label": "t:sections.slideshow.settings.slide_height.options__4.label"
         }
       ],
-      "default": "medium",
+      "default": "adapt_image",
       "label": "t:sections.slideshow.settings.slide_height.label"
     },
     {
@@ -287,6 +326,11 @@
           "id": "image",
           "label": "t:sections.slideshow.blocks.slide.settings.image.label"
         },
+        {
+          "type":"url",
+          "id":"imglink",
+          "label":"Image Link"
+         },
         {
           "type": "text",
           "id": "heading",
@@ -469,7 +513,8 @@
             }
           ],
           "default": "center",
-          "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label"
+          "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label" 
+          
         }
       ]
     }

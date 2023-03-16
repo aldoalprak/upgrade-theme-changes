@@ -41,6 +41,7 @@
         "image": "shopify:\/\/shop_images\/mycodog.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
+        "adapt_height_first_image": true,
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -66,7 +67,7 @@
         "1644345560ae71793c-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>MYCODOG - THE BEST MUSHROOM SUPPLEMENTS FOR DOGS<\/p>",
+            "heading": "MYCODOG - THE BEST MUSHROOM SUPPLEMENTS FOR DOGS",
             "heading_size": "h1"
           }
         },
@@ -122,7 +123,7 @@
         "1644363585f56cc491-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Mushroom tinctures for dogs can be administered orally – directly in their mouth, on their food, or with a treat. <\/p>",
+            "heading": "Mushroom tinctures for dogs can be administered orally – directly in their mouth, on their food, or with a treat. ",
             "heading_size": "h2"
           }
         },
@@ -194,7 +195,7 @@
         "template--14862046068801__b35ef76d-79f4-44e4-b210-d627139ac9f5-1673288324eab372f3-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Why Does Your Dog Need MycoDog Mushrooms?<\/p>",
+            "heading": "Why Does Your Dog Need MycoDog Mushrooms?",
             "heading_size": "h2"
           }
         }
@@ -293,7 +294,7 @@
         "template--14862046068801__56650363-7304-4c41-808b-a7771fba6bea-1673288324eab372f3-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>HOW MYCODOG HELPED ANGELA’S DOGS<\/p>",
+            "heading": "HOW MYCODOG HELPED ANGELA’S DOGS",
             "heading_size": "h1"
           }
         }
@@ -431,7 +432,7 @@
         "template--14862046068801__709f988b-5106-47a1-b8b0-4c3cadfcc81e-167328609135fef951-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>THE BENEFITS OF MEDICINAL MUSHROOMS FOR DOGS<\/p>",
+            "heading": "THE BENEFITS OF MEDICINAL MUSHROOMS FOR DOGS",
             "heading_size": "h1"
           }
         },
@@ -660,7 +661,7 @@
         "template--14862046068801__716a9eb7-a09e-4e08-bc84-fc507c161c9d-167328609135fef951-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>MYCODOG - MUSHROOM EXTRACTS FOR DOGS<\/p>",
+            "heading": "MYCODOG - MUSHROOM EXTRACTS FOR DOGS",
             "heading_size": "h2"
           }
         },
@@ -832,7 +833,7 @@
         "164514111261d9da74-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Contact Us!<\/p>",
+            "heading": "Contact Us!",
             "heading_size": "h2"
           }
         },

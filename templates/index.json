@@ -52,6 +52,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/9_40d413bd-2e23-475d-82dc-c355fc9ff21c.png",
+            "imglink": "https:\/\/shop.drruthroberts.com",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -70,6 +71,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/6_9c6cd74a-33b6-491d-a747-2206b0b1d141.png",
+            "imglink": "https:\/\/shop.drruthroberts.com\/pages\/more-about-ruth-angie",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -88,6 +90,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/7.png",
+            "imglink": "https:\/\/shop.drruthroberts.com\/collections\/mycodog-mushrooms-for-dogs",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -106,6 +109,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/8_6a31d7a8-30b3-4b59-b167-52cf8c14c985.png",
+            "imglink": "",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -128,6 +132,7 @@
         "template--14539827511361__fe69d8d2-7a41-4da1-9758-1429c56db22d-167362739216fd05d9-0"
       ],
       "settings": {
+        "show_on_device": "desktop--device",
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "dots",
@@ -144,6 +149,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner-mobile.png",
+            "imglink": "",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -162,6 +168,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/7_166c8bd9-73cd-4a6b-b1ed-391d60b1fed2.png",
+            "imglink": "",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -180,6 +187,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/xz.png",
+            "imglink": "",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -198,6 +206,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/8_38f1a9a9-32cd-4ece-989c-acadceb040a7.png",
+            "imglink": "",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -220,6 +229,7 @@
         "e8d0792a-c6fa-4ab3-a7d0-8bc5ff3609e9"
       ],
       "settings": {
+        "show_on_device": "mobile--device",
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "counter",
@@ -235,6 +245,7 @@
         "image": "shopify:\/\/shop_images\/Natural_products_hand-picked_and_used_by_real_vets_and_pet_coaches_2.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
+        "adapt_height_first_image": true,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
@@ -250,7 +261,7 @@
         "template--14539827511361__1cef2bb8-aa00-4d3c-a22f-7dc495af8b86-16751823354f98755f-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Customers love<\/p>",
+            "heading": "Customers love",
             "heading_size": "h1"
           }
         }
@@ -319,7 +330,7 @@
         "template--14539827511361__17e2e5c9-26ec-4471-a4b5-63d458001b3e-16748280726b5f7eb5-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Need some help?<\/p>",
+            "heading": "Need some help?",
             "heading_size": "h2"
           }
         },
@@ -437,7 +448,7 @@
         "4f01e049-0c94-43f7-8552-0998e6979722": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Build A Better Diet For Your Pet<\/p>",
+            "heading": "Build A Better Diet For Your Pet",
             "heading_size": "h2"
           }
         },
@@ -693,6 +704,7 @@
         "image": "shopify:\/\/shop_images\/Pure_and_Real_products_for_your_pet._1366_x_500_px_1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
+        "adapt_height_first_image": true,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
@@ -821,7 +833,7 @@
         "template--14539827511361__36095dc9-2792-4a21-a3f0-07b8c23746f3-1675780793f3d91c91-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Catch The Latest Your Natural Dog Podcast Episode...<\/p>",
+            "heading": "Catch The Latest Your Natural Dog Podcast Episode...",
             "heading_size": "h2"
           }
         },
@@ -959,6 +971,7 @@
         "image": "shopify:\/\/shop_images\/Untitled_design_fbc762c9-0bb1-417b-83e7-c2d92a358075.png",
         "image_overlay_opacity": 50,
         "image_height": "small",
+        "adapt_height_first_image": true,
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",

@@ -1,0 +1,34 @@
+{% comment %}
+  Add custom filters to collection page using jQuery
+{% endcomment %}
+
+{% assign tags = "" %}
+
+{% for product in collection.products %}
+  {% for tag in product.tags %}
+    {% assign tags = tags | append: ',' | append: tag %}
+  {% endfor %}
+{% endfor %}
+
+{% assign tags = tags | split: ',' | uniq %}
+
+<div class="filter-section">
+  <h2>Filter by Tag:</h2>
+  <ul>
+    {% for tag in tags %}
+      <li><a href="#" data-filter=".tag-{{ tag | handleize }}">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+  $(function() {
+    $('.filter-section a').on('click', function(e) {
+      e.preventDefault();
+      var filter = $(this).data('filter');
+      console.log(filter);
+      $('#product-grid .grid__item').hide();
+      $('#product-grid ' + filter).show();
+    });
+  });
+</script>
