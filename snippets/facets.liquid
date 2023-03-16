@@ -1,12 +1,10 @@
 {% comment %}
   Renders facets (filtering and sorting)
-
   Accepts:
   - results: {Object} Collection or Search object
   - enable_filtering: {Boolean} Show filtering when true
   - enable_sorting: {Boolean} Show sorting when true
   - filter_type: {String} Type of filter
-
   Usage:
   {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical' %}
 {% endcomment %}
@@ -122,7 +120,7 @@
                     {% endif %}
                   >
                     <summary
-                      class="facets__summary caption-large focus-offset"
+                      class="dfsdgdfgsdfs facets__summary caption-large focus-offset"
                       aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})"
                     >
                       <div>
@@ -159,8 +157,16 @@
                           class="{% if filter_type != 'vertical' %} facets__list{% endif %} list-unstyled no-js-hidden"
                           role="list"
                         >
-                          {%- for value in filter.values -%}
-                            <li class="list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+                {% assign product_types = "Core Product,Digital Course,Ebook,At-Home Lab Test,Pet Supplies" | split: ',' %}
+                {% assign temp_values =  '' %}  
+                {% assign temp_index =  '' %}  
+                
+                {%- for value in filter.values -%}
+                  {% assign valueaname =  value.value  %}
+                  {% assign temp_values =  temp_values  |  append: valueaname  %}
+                  {% assign temp_values =  temp_values  |  append: " , "  %}   
+                  
+                  <li class="vfvfv list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                               <label
                                 for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
                                 class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}"
@@ -216,6 +222,33 @@
                                 >
                               </label>
                             </li>
+                       {% assign temp_index = forloop.index  %}  
+                       {%- endfor -%}
+                   {%- for value in filter.values  -%}
+                      {% assign temp_index = temp_index | plus: 1  %}  
+                             {%  if filter.label == "Product type" %}
+                            {% for product_type in product_types %}
+                                {% unless temp_values contains product_type %}
+                                {% assign clsproduct_type = product_type | append: " , " %}  
+                                {% assign temp_values = temp_values | append: clsproduct_type %}
+                                 <li class="ghghgh list-menu__item facets__item{% if temp_index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+                                  <label for="Filter-{{ filter.param_name | escape }}-{{ temp_index }}"  class="facet-checkbox facet-checkbox--disabled">
+                                    <input type="checkbox" name="{{ value.param_name }}"   value="{{ product_type }}" id="Filter-{{ filter.param_name | escape }}-{{ temp_index }}" disabled>
+                                    <svg  width="1.6rem" height="1.6rem" viewBox="0 0 16 16"  aria-hidden="true"  focusable="false" >
+                                      <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                    </svg>
+    
+                                    <svg aria-hidden="true" class="icon icon-checkmark" width="1.1rem"  height="0.7rem" viewBox="0 0 11 7"  fill="none"  xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor"  stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+    
+                                    <span aria-hidden="true">{{ product_type | escape }} (0)</span>
+                                    <span class="visually-hidden"> {{- product_type | escape }} (0)</span>
+                                  </label>
+                                </li>
+                                {% endunless %}
+                            {% endfor %}
+                          {%  endif %}
                           {%- endfor -%}
                         </ul>
                         {% comment %} No show more for no JS {% endcomment %}

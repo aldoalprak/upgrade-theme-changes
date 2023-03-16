@@ -39,6 +39,7 @@
         "image": "shopify:\/\/shop_images\/root-vegetable-salad.jpg",
         "image_overlay_opacity": 50,
         "image_height": "small",
+        "adapt_height_first_image": false,
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -165,6 +166,7 @@
         "image": "shopify:\/\/shop_images\/woman_and_dog_on_the_beach.jpg",
         "image_overlay_opacity": 50,
         "image_height": "small",
+        "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -277,7 +279,7 @@
         "template--14870887661633__1c47f32e-aaec-450a-b8dd-b07b56bbf055-1674139819768fef2c-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Contact Us:<\/p>",
+            "heading": "Contact Us:",
             "heading_size": "h1"
           }
         },

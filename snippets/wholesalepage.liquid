@@ -1,0 +1,50 @@
+<p>Are you a wholesale customer? If so, please login to your account to view our wholesale  pricelist</p>
+<button class="mybutton" onclick="myFunction()">Open Wholesale List</button>
+<style>
+.mybutton{
+
+    box-shadow:inset 0px -3px 7px 0px #08708a;
+
+    background:linear-gradient(to bottom, #08708a 5%, #08708a 100%);
+
+    background-color:#08708a
+
+    border-radius:3px;
+
+    border:1px solid #0b0e07;
+
+    display:inline-block;
+
+    cursor:pointer;
+
+    color:#ffffff;
+
+    font-family:Arial;
+
+    font-size:15px;
+
+    padding:9px 23px;
+
+    text-decoration:none;
+
+    text-shadow:0px 1px 0px #263666;
+
+}
+
+</style>
+
+<script>
+
+function myFunction() {
+
+if(ShopifyAnalytics?.meta?.page?.customerId){
+
+__ConversionBearWholesaleSDK.openMainPage();
+
+} else {
+
+window.location.href = "account/login"
+
+}
+
+}</script>

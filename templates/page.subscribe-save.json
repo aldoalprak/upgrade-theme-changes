@@ -58,7 +58,7 @@
         "template--14874397245505__32ba5116-94b0-4538-a10b-81183c67f254-167468111154d13b57-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>How does it work?<\/p>",
+            "heading": "How does it work?",
             "heading_size": "h1"
           }
         }
@@ -135,7 +135,7 @@
         "template--14874397245505__43998685-e0fa-4385-8779-e9c1c0fbe312-167468111154d13b57-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>SUBSCRIBE TO ANY PRODUCT<\/p>",
+            "heading": "SUBSCRIBE TO ANY PRODUCT",
             "heading_size": "h1"
           }
         }

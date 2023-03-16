@@ -49,6 +49,7 @@
         "image": "shopify:\/\/shop_images\/Pure_and_Real_products_for_your_pet._1.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
+        "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -99,6 +100,7 @@
         "image": "shopify:\/\/shop_images\/Pet_Health_Coaching_2.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
+        "adapt_height_first_image": true,
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -204,7 +206,7 @@
         "template--14862445903937__a760cfb1-5acd-4e85-896a-0692d094ee8f-1672417531935869ab-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Why we've collaborated<\/p>",
+            "heading": "Why we've collaborated",
             "heading_size": "h1"
           }
         },
