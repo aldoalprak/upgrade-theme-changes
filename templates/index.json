@@ -139,6 +139,7 @@
     },
     "96d19274-6a91-40cb-9fa3-9224307a4365": {
       "type": "slideshow",
+      "disabled": true,
       "blocks": {
         "template--14539827511361__96d19274-6a91-40cb-9fa3-9224307a4365-167482893228647a0c-0": {
           "type": "slide",
@@ -234,7 +235,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/Natural_products_hand-picked_and_used_by_real_vets_and_pet_coaches_2.png",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "adapt",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
@@ -259,6 +260,8 @@
         "template--14539827511361__1cef2bb8-aa00-4d3c-a22f-7dc495af8b86-16751823354f98755f-0"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "accent-1",
         "full_width": true,
         "padding_top": 0,
@@ -335,6 +338,8 @@
         "923f661f-3217-4f19-aa6c-aaae7d025897"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 0,
@@ -453,6 +458,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "accent-1",
         "full_width": false,
         "padding_top": 0,
@@ -517,6 +524,11 @@
         "product": "the-original-crockpet-diet-membership",
         "color_scheme": "background-1",
         "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
         "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 36,
@@ -838,7 +850,10 @@
           "settings": {
             "button_label": "Button label",
             "button_link": "",
-            "button_style_secondary": false
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
@@ -848,6 +863,8 @@
         "template--14539827511361__36095dc9-2792-4a21-a3f0-07b8c23746f3-1675780793f3d91c91-2"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 16,
